@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="17dp"
-        android:text="Happy Birthday,Thái!"
+        android:text="Happy Birthday,Dương!"
         android:textColor="@color/black"
         android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
