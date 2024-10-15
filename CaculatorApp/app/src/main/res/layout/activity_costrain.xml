@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/almostBlack"
+    tools:context="com.example.calculatorapp.MainActivity">
+
+    <!-- Workings TextView -->
+    <TextView
+        android:id="@+id/workingsTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textAlignment="textEnd"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/resultsTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="20dp"/>
+
+    <!-- Results TextView -->
+    <TextView
+        android:id="@+id/resultsTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workingsTV"
+        android:padding="20dp"/>
+
+    <!-- Container for buttons -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultsTV">
+
+        <!-- Row 1 -->
+        <Button
+            android:id="@+id/buttonCE"
+            style="@style/buttonNumber"
+            android:textColor="@color/red"
+            android:onClick="allClearAction"
+            android:text="CE"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/buttonC"
+            style="@style/buttonNumber"
+            android:textColor="@color/red"
+            android:onClick="backSpaceAction"
+            android:text="C"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonCE"/>
+
+        <Button
+            android:id="@+id/buttonBS"
+            style="@style/buttonNumber"
+            android:text="BS"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonC"/>
+
+        <Button
+            android:id="@+id/buttonDivide"
+            style="@style/buttonNumber"
+            android:text="/"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Row 2 -->
+        <Button
+            android:id="@+id/button7"
+            style="@style/buttonNumber"
+            android:text="7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/buttonCE"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/buttonNumber"
+            android:text="8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/buttonCE"
+            app:layout_constraintStart_toEndOf="@id/button7"/>
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/buttonNumber"
+            android:text="9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/buttonCE"
+            app:layout_constraintStart_toEndOf="@id/button8"/>
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            style="@style/buttonNumber"
+            android:text="x"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/buttonCE"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Row 3 -->
+        <Button
+            android:id="@+id/button4"
+            style="@style/buttonNumber"
+            android:text="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button7"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/buttonNumber"
+            android:text="5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button7"
+            app:layout_constraintStart_toEndOf="@id/button4"/>
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/buttonNumber"
+            android:text="6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button7"
+            app:layout_constraintStart_toEndOf="@id/button5"/>
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            style="@style/buttonNumber"
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button7"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Row 4 -->
+        <Button
+            android:id="@+id/button1"
+            style="@style/buttonNumber"
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button4"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/buttonNumber"
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button4"
+            app:layout_constraintStart_toEndOf="@id/button1"/>
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/buttonNumber"
+            android:text="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button4"
+            app:layout_constraintStart_toEndOf="@id/button2"/>
+
+        <Button
+            android:id="@+id/buttonAdd"
+            style="@style/buttonNumber"
+            android:text="+"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button4"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Row 5 -->
+        <Button
+            android:id="@+id/buttonNegate"
+            style="@style/buttonNumber"
+            android:text="+/-"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button1"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/button0"
+            style="@style/buttonNumber"
+            android:text="0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintTop_toBottomOf="@id/button1"
+            app:layout_constraintStart_toEndOf="@id/buttonNegate"/>
+
+        <Button
+            android:id="@+id/buttonDot"
+            style="@style/buttonNumber"
+            android:text="."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button1"
+            app:layout_constraintStart_toEndOf="@id/button0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonEquals"/>  <!-- Add this if buttonEquals should be below -->
+
+
+
+        <Button
+            android:id="@+id/buttonEquals"
+            style="@style/buttonNumber"
+            android:text="="
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintTop_toBottomOf="@id/button1"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
